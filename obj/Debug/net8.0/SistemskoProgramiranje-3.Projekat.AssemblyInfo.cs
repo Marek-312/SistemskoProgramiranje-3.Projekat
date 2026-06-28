@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemskoProgramiranje-3.Projekat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bfd32ea99e1cb64ccef1be673b4ea69751d5533")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6f7f9a2bd584df9c4b2accf8dbfadd525798574")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemskoProgramiranje-3.Projekat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemskoProgramiranje-3.Projekat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

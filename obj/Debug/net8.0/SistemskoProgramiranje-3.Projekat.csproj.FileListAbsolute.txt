@@ -1,0 +1,27 @@
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\SistemskoProgramiranje-3.Projekat.csproj.AssemblyReference.cache
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\SistemskoProgramiranje-3.Projekat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\SistemskoProgramiranje-3.Projekat.AssemblyInfoInputs.cache
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\SistemskoProgramiranje-3.Projekat.AssemblyInfo.cs
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\SistemskoProgramiranje-3.Projekat.csproj.CoreCompileInputs.cache
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\SistemskoProgramiranje-3.Projekat.sourcelink.json
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\SistemskoProgramiranje-3.Projekat.exe
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\SistemskoProgramiranje-3.Projekat.deps.json
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\SistemskoProgramiranje-3.Projekat.runtimeconfig.json
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\SistemskoProgramiranje-3.Projekat.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\SistemskoProgramiranje-3.Projekat.pdb
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\Google.Apis.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\Google.Apis.Auth.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\Google.Apis.Core.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\Google.Apis.Drive.v3.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\Google.Apis.YouTube.v3.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\System.Management.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\Sistemsk.3FC3BF19.Up2Date
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\SistemskoProgramiranje-3.Projekat.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\refint\SistemskoProgramiranje-3.Projekat.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\SistemskoProgramiranje-3.Projekat.pdb
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\SistemskoProgramiranje-3.Projekat.genruntimeconfig.cache
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\obj\Debug\net8.0\ref\SistemskoProgramiranje-3.Projekat.dll
+C:\Users\Marko\Desktop\Mare Skola\Sistemsko programiranje\SistemskoProgramiranje-3.Projekat\bin\Debug\net8.0\data\sentiment labelled sentences\sentiment labelled sentences\yelp_labelled.txt
