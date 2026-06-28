@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Google.Apis.Services;
 using Google.Apis.YouTube.v3;
-using Google.Apis.YouTube.v3.Data;
+using Microsoft.Extensions.Configuration;
 
 namespace treciProjekat
 {
@@ -10,8 +10,14 @@ namespace treciProjekat
     {
         public static async Task SearchVideosAsync()
         {
-            // Replace with your actual API Key
-            string apiKey = "AIzaSyDAbxO1dUqzgiv7ZXtESVfYAWdxYbtixfk";
+            // Čitaj API key iz appsettings.json
+            var config = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false)
+                .Build();
+
+            string apiKey = config["YouTube:ApiKey"]
+                ?? throw new Exception("API key nije pronađen u appsettings.json!");
 
             // Initialize the YouTube Service
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
@@ -22,8 +28,8 @@ namespace treciProjekat
 
             // Create the search request
             var searchListRequest = youtubeService.Search.List("snippet");
-            searchListRequest.Q = "C# .NET Tutorial"; // Replace with your search term
-            searchListRequest.MaxResults = 5; // Limit results for simplicity
+            searchListRequest.Q = "C# .NET Tutorial";
+            searchListRequest.MaxResults = 5;
 
             // Execute the request
             var searchListResponse = await searchListRequest.ExecuteAsync();
