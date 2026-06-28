@@ -1,5 +1,7 @@
 ﻿using treciProjekat;
 
-YouTubeExample ex = new YouTubeExample();
-
+// Pokreni YouTube pretragu
 await YouTubeExample.SearchVideosAsync();
+
+// Pokreni ML sentiment analizu
+ML.Run();
