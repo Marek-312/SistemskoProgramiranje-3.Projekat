@@ -1,5 +1,3 @@
-using Akka.Actor;
-using Akka.Event;
 
 //namespace AkkaWordCounter;
 
