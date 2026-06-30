@@ -1,52 +1,47 @@
 using Akka.Actor;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 
 namespace treciProjekat;
 
-// Definišemo poruke koje menadžer razume
-public record ZapocniAnalizuPoruka(string VideoId);
-public record ObrišiVideoPoruka(string VideoId);
-
 public class VideoManagerActor : ReceiveActor
 {
-    // Interno stanje - običan rečnik koji je bezbedan jer ga samo ovaj aktor vidi
     private readonly Dictionary<string, IActorRef> _videoAktori;
 
     public VideoManagerActor()
     {
         _videoAktori = new Dictionary<string, IActorRef>();
 
-        // 1. Šta radimo kada stigne zahtev za analizu (iz kontrolera ili Rx-a)
-        Receive<ZapocniAnalizuPoruka>(poruka =>
+        // 1. Reagovanje na zahtev sa Weba (zahtev za stanje)
+        Receive<DajTrenutnoStanjePoruka>(poruka =>
         {
             string videoId = poruka.VideoId;
+            ProveriIKreirajDete(videoId);
 
-            // Ako aktor za taj video već ne postoji, pravimo ga dinamički!
-            if (!_videoAktori.ContainsKey(videoId))
-            {
-                // Props govori Akka.NET-u kako da instancira tvoje dete-aktora
-                IActorRef deteAktor = Context.ActorOf(Props.Create(() => new VideoAnalystActor(videoId)), $"analyst-{videoId}");
-
-                _videoAktori.Add(videoId, deteAktor);
-            }
-
-            // Prosleđujemo (Forward) poruku detetu koje je zaduženo za taj video.
-            // Forward zadržava originalnog pošiljaoca (Web server), pa će dete moći direktno da mu odgovori.
+            // Forward-ujemo zahtev detetu da ono direktno odgovori HttpListener-u
             _videoAktori[videoId].Forward(poruka);
         });
 
-        // 2. Šta radimo ako želimo da obrišemo/zaustavimo praćenje videa
-        Receive<ObrišiVideoPoruka>(poruka =>
+        // 2. EVO GDE JE BIO PROBLEM: Dodajemo reagovanje na komentar iz Rx.NET-a!
+        Receive<NoviKomentarPoruka>(poruka =>
         {
-            if (_videoAktori.TryGetValue(poruka.VideoId, out var deteAktor))
-            {
-                // Pošaljemo detetu poruku da se ugasi (otruje)
-                deteAktor.Tell(PoisonPill.Instance);
+            string videoId = poruka.VideoId;
+            ProveriIKreirajDete(videoId);
 
-                // Obrišemo ga iz rečnika
-                _videoAktori.Remove(poruka.VideoId);
-            }
+            // Prosleđujemo komentar detetu koje ga analizira preko ML.NET-a
+            _videoAktori[videoId].Tell(poruka);
         });
+    }
+
+    // Pomoćna metoda unutar aktora da ne dupliramo kod za pravljenje dece
+    private void ProveriIKreirajDete(string videoId)
+    {
+        if (!_videoAktori.ContainsKey(videoId))
+        {
+            IActorRef deteAktor = Context.ActorOf(
+                Props.Create(() => new VideoAnalystActor(videoId)),
+                $"analyst-{videoId}"
+            );
+            _videoAktori.Add(videoId, deteAktor);
+        }
     }
 }
