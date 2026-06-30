@@ -12,10 +12,13 @@
     <PackageReference Include="Akka" Version="1.5.69" />
     <PackageReference Include="Google.Apis.Drive.v3" Version="1.74.0.4135" />
     <PackageReference Include="Google.Apis.Youtube.v3" Version="1.75.0.4176" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.11" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.9" />
     <PackageReference Include="Microsoft.Extensions.ML" Version="5.0.0" />
     <PackageReference Include="Microsoft.ML" Version="5.0.0" />
     <PackageReference Include="Microsoft.ML.FastTree" Version="5.0.0" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />   
+  
   </ItemGroup>
  <ItemGroup>
   <Content Include="data\sentiment labelled sentences\sentiment labelled sentences\yelp_labelled.txt">

@@ -25,6 +25,31 @@ namespace treciProjekat
 
     public class ML
     {
+        private static MLContext _mlContext = new MLContext();
+        private static ITransformer _model;
+        private static PredictionEngine<SentimentData, SentimentPrediction> _predictionEngine;
+        public static void Inicijalizuj()
+        {
+            TrainTestData splitDataView = LoadData(_mlContext);
+            _model = BuildAndTrainModel(_mlContext, splitDataView.TrainSet);
+            Evaluate(_mlContext, _model, splitDataView.TestSet);
+
+            // Kreiramo engine koji će aktori koristiti
+            _predictionEngine = _mlContext.Model.CreatePredictionEngine<SentimentData, SentimentPrediction>(_model);
+        }
+        public static bool AnalizirajTekst(string tekst)
+        {
+            var input = new SentimentData { SentimentText = tekst };
+
+            // PredictionEngine NIJE thread-safe u ML.NET-u ako se koristi grubo, 
+            // ali pošto naši aktori rade single-threaded, zaključavanje (lock)
+            // obezbeđuje sigurnost ako više aktora pristupa u isto vreme.
+            lock (_predictionEngine)
+            {
+                var prediction = _predictionEngine.Predict(input);
+                return prediction.Prediction; // vraća true (pozitivan) ili false (negativan)
+            }
+        }
         static string _dataPath = Path.Combine(
             Environment.CurrentDirectory,
             "data",

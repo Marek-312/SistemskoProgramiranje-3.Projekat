@@ -14,7 +14,8 @@
           "Microsoft.Extensions.Configuration.Json": "10.0.9",
           "Microsoft.Extensions.ML": "5.0.0",
           "Microsoft.ML": "5.0.0",
-          "Microsoft.ML.FastTree": "5.0.0"
+          "Microsoft.ML.FastTree": "5.0.0",
+          "System.Reactive": "5.0.0"
         },
         "runtime": {
           "SistemskoProgramiranje-3.Projekat.dll": {}
@@ -593,6 +594,14 @@
           }
         }
       },
+      "System.Reactive/5.0.0": {
+        "runtime": {
+          "lib/net5.0/System.Reactive.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.1"
+          }
+        }
+      },
       "System.Reflection.Emit.Lightweight/4.7.0": {},
       "System.Runtime.CompilerServices.Unsafe/6.1.2": {},
       "System.Security.AccessControl/6.0.0": {},
@@ -959,6 +968,13 @@
       "sha512": "sha512-ynVvqELpMWGQJ1Y90rlAmuTiSQIkXD0W5AMj7pVpEjECmrcIJLexIBblgccerHFijayfcsl1KCbkk+Sg5cS9vQ==",
       "path": "system.numerics.tensors/9.0.4",
       "hashPath": "system.numerics.tensors.9.0.4.nupkg.sha512"
+    },
+    "System.Reactive/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+      "path": "system.reactive/5.0.0",
+      "hashPath": "system.reactive.5.0.0.nupkg.sha512"
     },
     "System.Reflection.Emit.Lightweight/4.7.0": {
       "type": "package",
